@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dictionary App</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome for search icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+   <div class="top-bar">
+  <!-- Font Selector -->
+  <select id="fontSelect" onchange="changeFont(this.value)">
+    <option value="'Inter', sans-serif">Inter</option>
+    <option value="'Merriweather', serif">Merriweather</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Courier New">Courier New</option>
+  </select>
+
+  <!-- Toggle Switch -->
+  <label class="switch">
+    <input type="checkbox" id="darkModeToggle" onclick="toggleTheme()" />
+    <span class="slider"></span>
+  </label>
+</div>
+
+    </div>
+    <!-- App Title -->
+    <h1>Dictionary App</h1>
+
+    <!-- Search Bar with Icon -->
+    <div class="search-bar">
+      <input type="text" id="wordInput" placeholder="Search a word..." />
+      <button onclick="searchWord()" class="icon-button">
+        <i class="fas fa-search"></i>
+      </button>
+      <button class="icon-button" onclick="speakWord(document.getElementById('wordInput').value)">
+  🔊
+    </div>
+    <div>
+        
+</button>
+
+    </div>
+
+    <!-- Results -->
+    <div id="result" class="result-box"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
